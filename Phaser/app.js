@@ -59,6 +59,27 @@ function create() {
 		enemy1.body.gravity.y = 500;
 		enemy1.body.collideWorldBounds = true;
 
+	enemy2 = game.add.sprite(750, 20, 'baddie');
+		// animate the sprite
+		enemy2.animations.add('left', [0,1], 10, true);
+		enemy2.animations.add('right', [2,3], 10, true);
+		game.physics.arcade.enable(enemy2);
+		// creating physics for enemy sprite
+		enemy2.body.bounce.y = 0.2;
+		enemy2.body.gravity.y = 500;
+		enemy2.body.collideWorldBounds = true;
+
+	enemy3 = game.add.sprite(750, 20, 'baddie');
+		// animate the sprite
+		enemy3.animations.add('left', [0,1], 10, true);
+		enemy3.animations.add('right', [2,3], 10, true);
+		game.physics.arcade.enable(enemy3);
+		// creating physics for enemy sprite
+		enemy3.body.bounce.y = 0.2;
+		enemy3.body.gravity.y = 500;
+		enemy3.body.collideWorldBounds = true;
+
+
 	cursors = game.input.keyboard.createCursorKeys();
 
 	star = game.add.physicsGroup();
